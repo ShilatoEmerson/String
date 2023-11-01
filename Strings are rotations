@@ -1,0 +1,21 @@
+const rotStr=(s1,s2)=>{
+    if(s1.length!=s2.length){
+        return false;
+    }
+    let news1=s1.split("")
+    const out=[]
+    for(let i=0;i<s1.length;i++){
+        
+        news1.splice((s1.length+i),0,news1.splice(0,1)[0])
+        out.push(news1.join(""))
+    }
+   if(out.includes(s2)){
+       return true
+   }
+   else{
+       return false
+   }
+}
+const str1 = "ABCD";  
+const str2 = "ACBD";  
+console.log(rotStr(str1,str2))
