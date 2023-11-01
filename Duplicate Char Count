@@ -1,0 +1,20 @@
+const longRepeat=(s,k)=>{
+    let obj={}
+    let t=""
+    for(let i=0;i<s.length;i++){
+        if( s[i] in obj){
+            obj[s[i]]=obj[s[i]]+1
+        }
+        else{
+            obj[s[i]]=1
+        }
+    }
+    Object.keys(obj).forEach(item=>{
+        t=t+item+obj[item]
+    })
+return t;
+}
+
+const s = "shilatoemerson" 
+const k = 2
+console.log(longRepeat(s,k))
